@@ -16,13 +16,15 @@ JLeague.prototype.getSummonerByName = function(summonerName, callback) {
   })
 };
 
-JLeague.prototype.getLeagueBySummonerId = function(summonerId) {
+JLeague.prototype.getLeagueBySummonerId = function(summonerId, callback) {
   request(this.BASE_PATH + 'league/v3/positions/by-summoner/' + summonerId + '?api_key=' + this.API_KEY, {
     json: true
   }, (err, response, json) => {
     if (err) {
       return console.log(err);
     }
-    console.log(json);
+    callback(json);
   })
 };
+
+module.exports = JLeague;
