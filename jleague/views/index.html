@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
 
 <head>
   <title>JLeague</title>
@@ -21,4 +21,58 @@
     </tr>
   </table>
 </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JLeague</title>
+
+    <script>
+    function test() {
+      window.location.href = "/getSummonerByName/test";
+    }
+    </script>
+
+    <!-- Bootstrap and CSS here-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+  </head>
+  <body class='container'>
+
+      <div id='app' class='center'>
+
+        <div id='headers'>
+          <!-- Title and subtitles! -->
+          <h1>JLeague</h1>
+          <h2>Enter your summoner name</h2>
+        </div>
+
+        <div id='main'>
+
+          <div id='input-parent'>
+            <!-- summoner name input, and submit button -->
+            <div class="form-group">
+              <input id='player-input' placeholder="Summoner Name" maxlength='16' autofocus=autofocus></input>
+            </div>
+            <button type="button" class="btn btn-primary" id='submit'>Go!</button>
+          </div>
+
+        </div>
+      </div>
+
+
+
+    <div id='footer' class='center'>
+        <div class='row'>
+
+          <div class='col-sm-4'>
+            <h4>Project by Justin and Matt Mintzer</h4>
+          </div>
+
+        </div>
+    </div>
+
+  </body>
 </html>

@@ -1,0 +1,20 @@
+.center {
+  text-align: center;
+}
+
+#footer {
+  width: 100%;
+  border-top: solid 2px black;
+  position: fixed;
+  bottom: 0;
+}
+
+#player-input {
+  text-align: center;
+}
+
+#input-parent {
+  margin: 5% auto 50px;
+  display: inline-block;;
+  text-align: center;
+}
