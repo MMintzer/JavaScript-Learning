@@ -15,12 +15,17 @@ app.get('/', function(req, res){
 
 app.get('/getSummonerByName/:name', function(req, res){
   let name = req.params.name;
-  api.getSummonerByName(name, function(summoner) {
-    var summonerId = summoner.id;
+  let summonerId = findSummoner(name, function(s) {
+	  let summonerObj = "id: " + s.id + "<p>Name: " + s.name + "<p>Level: " + s.summonerLevel;
+	  res.send(summonerObj);
   });
-  console.log(summonerId);
-  res.send(summonerId);
 });
+
+function findSummoner(summoner, callback) {
+	api.getSummonerByName(summoner, function(s) {
+    return callback(s);
+  });
+}
 
 
 console.log("Starting JLeague..");
